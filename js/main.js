@@ -11,6 +11,7 @@ document.addEventListener('partials:loaded', () => {
   initLoopDiagram();
   initRoleTabs();
   initYear();
+   initRegistrationForm();
 });
 
 /* ---------------- Navbar: scroll shadow + mobile toggle ---------------- */
@@ -187,4 +188,119 @@ function initRoleTabs() {
 function initYear() {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+/* =====================================================
+   MENTORA LOOP REGISTRATION FORM
+===================================================== */
+
+
+
+
+function initRegistrationForm() {
+
+  /* GET ELEMENTS */
+
+  const registrationForm =
+    document.getElementById('registrationForm');
+
+  const roleInputs =
+    document.querySelectorAll('input[name="Role"]');
+
+  const studentField =
+    document.getElementById('studentField');
+
+  const teacherField =
+    document.getElementById('teacherField');
+
+  const skillsToLearn =
+    document.getElementById('skillsToLearn');
+
+  const skillsToTeach =
+    document.getElementById('skillsToTeach');
+
+  const submitButton =
+    document.getElementById('submitButton');
+
+
+  /* SAFETY CHECK */
+
+  if (!registrationForm || !roleInputs.length) {
+    console.log('Registration form not found');
+    return;
+  }
+
+
+  console.log('Registration form initialized');
+
+
+  /* =====================================================
+     ROLE SELECTION
+  ===================================================== */
+
+  roleInputs.forEach(function (role) {
+
+    role.addEventListener('change', function () {
+
+      console.log('Selected role:', this.value);
+
+
+      /* =================================================
+         STUDENT
+      ================================================= */
+
+      if (this.value === 'Student / Learner') {
+
+        studentField.style.display = 'block';
+
+        teacherField.style.display = 'none';
+
+        skillsToLearn.required = true;
+
+        skillsToTeach.required = false;
+
+        skillsToTeach.value = '';
+
+      }
+
+
+      /* =================================================
+         TEACHER
+      ================================================= */
+
+      else if (this.value === 'Teacher / Mentor') {
+
+        teacherField.style.display = 'block';
+
+        studentField.style.display = 'none';
+
+        skillsToTeach.required = true;
+
+        skillsToLearn.required = false;
+
+        skillsToLearn.value = '';
+
+      }
+
+    });
+
+  });
+
+
+  /* =====================================================
+     FORM SUBMIT
+  ===================================================== */
+
+  registrationForm.addEventListener('submit', function () {
+
+    if (submitButton) {
+
+      submitButton.innerText =
+        'Submitting...';
+
+      submitButton.disabled = true;
+
+    }
+
+  });
+
 }

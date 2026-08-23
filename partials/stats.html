@@ -15,10 +15,276 @@
       <div class="eyebrow">Your Journey Starts Here</div>
       <h2>Learn what interests you. Teach what you know.</h2>
       <p>Explore academic preparation, creative skills, practical crafts, professional development and new learning paths — or help someone else learn what you already know.</p>
-      <div class="cta-actions">
-        <a href="#categories" class="btn btn-primary">Explore skills</a>
-        <a href="#paths" class="btn btn-ghost">Become a mentor</a>
-      </div>
+     <section id="registration" class="registration-section">
+
+    <div class="registration-container">
+
+        <!-- FORM HEADER -->
+        <div class="registration-header">
+
+            <h2 style="color: black;">Join Mentora Loop</h2>
+
+            <p  style="color: black;">
+                Learn new skills, share your knowledge,
+                and connect with the right people.
+            </p>
+
+        </div>
+
+
+        <!-- REGISTRATION FORM -->
+        <form
+            id="registrationForm"
+            action="https://formsubmit.co/kashafabdullah06@gmail.com"
+            method="POST"
+        >
+
+            <!-- FORM SUBMIT SETTINGS -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="New Mentora Loop Registration"
+            >
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+            >
+
+
+            <!-- =========================
+                 ROLE SELECTION
+            ========================== -->
+
+            <div class="form-group">
+
+                <label class="form-label">
+                    I want to
+                </label>
+
+
+                <div class="role-options">
+
+                    <!-- STUDENT -->
+
+                    <label class="role-card">
+
+                        <input
+                            type="radio"
+                            name="Role"
+                            value="Student / Learner"
+                            required
+                        >
+
+                        <div class="role-content">
+
+                            <span class="role-icon">
+                                🎓
+                            </span>
+
+                            <span class="role-title">
+                                Student / Learner
+                            </span>
+
+                            <span class="role-description">
+                                I want to learn new skills
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- TEACHER -->
+
+                    <label class="role-card">
+
+                        <input
+                            type="radio"
+                            name="Role"
+                            value="Teacher / Mentor"
+                            required
+                        >
+
+                        <div class="role-content">
+
+                            <span class="role-icon">
+                                🧑‍🏫
+                            </span>
+
+                            <span class="role-title">
+                                Teacher / Mentor
+                            </span>
+
+                            <span class="role-description">
+                                I want to teach my skills
+                            </span>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 FULL NAME
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    name="Full Name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 PHONE
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="Phone Number"
+                    placeholder="03XX XXXXXXX"
+                    required
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 EMAIL
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="example@gmail.com"
+                    required
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 OCCUPATION
+            ========================== -->
+
+            <div class="form-group">
+
+                <label for="occupation">
+                    Occupation
+                </label>
+
+                <input
+                    type="text"
+                    id="occupation"
+                    name="Occupation"
+                    placeholder="e.g. Student, Developer, Designer"
+                    required
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 STUDENT FIELD
+            ========================== -->
+
+            <div
+                class="form-group conditional-field"
+                id="studentField"
+            >
+
+                <label for="skillsToLearn">
+                    What do you want to learn?
+                </label>
+
+                <textarea
+                    id="skillsToLearn"
+                    name="Skills I Want To Learn"
+                    placeholder="e.g. React.js, Python, UI/UX Design, Digital Marketing..."
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <!-- =========================
+                 TEACHER FIELD
+            ========================== -->
+
+            <div
+                class="form-group conditional-field"
+                id="teacherField"
+            >
+
+                <label for="skillsToTeach">
+                    What can you teach?
+                </label>
+
+                <textarea
+                    id="skillsToTeach"
+                    name="Skills I Can Teach"
+                    placeholder="e.g. JavaScript, React.js, Graphic Design, English..."
+                    rows="4"
+                ></textarea>
+
+            </div>
+
+
+            <!-- =========================
+                 SUBMIT BUTTON
+            ========================== -->
+
+            <button
+                type="submit"
+                id="submitButton"
+                class="registration-submit"
+            >
+                Submit Registration
+            </button>
+
+
+        </form>
+
+    </div>
+
+</section>
     </div>
   </div>
 </section>
