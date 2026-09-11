@@ -32,6 +32,7 @@ async function loadAllPartials() {
     loadPartial('#mount-roles', 'partials/roles.html'),
     loadPartial('#mount-features', 'partials/features.html'),
     loadPartial('#mount-community', 'partials/community.html'),
+    loadPartial('#mount-faq', 'partials/faq.html'),
     loadPartial('#mount-stats', 'partials/stats.html'),
     loadPartial('#mount-footer', 'partials/footer.html'),
   ]);
