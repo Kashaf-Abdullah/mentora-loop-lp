@@ -800,3 +800,12 @@
 .category-icon span, .feature-icon span { font-size: 1.35rem; line-height: 1; }
 .category-card h3, .feature-card h3 { letter-spacing: -0.015em; }
 .hero-copy h1 { max-width: 720px; }
+.registration-section #registrationMessage {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  color: #b42318;
+}
+
+.registration-section #registrationMessage[data-state="success"] {
+  color: #067647;
+}

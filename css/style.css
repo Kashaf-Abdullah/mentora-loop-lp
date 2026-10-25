@@ -299,7 +299,7 @@ body.is-loading > * { visibility: hidden; }
 
     font-weight: 700;
 
-    color: var(--registration-title-color);
+    color: black;
 }
 
 .registration-header p.registration-subtitle {

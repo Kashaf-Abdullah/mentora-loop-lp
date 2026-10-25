@@ -290,17 +290,64 @@ function initRegistrationForm() {
      FORM SUBMIT
   ===================================================== */
 
-  registrationForm.addEventListener('submit', function () {
+  const registrationMessage = document.getElementById('registrationMessage');
+
+  registrationForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
 
     if (submitButton) {
-
-      submitButton.innerText =
-        'Submitting...';
-
+      submitButton.innerText = 'Submitting...';
       submitButton.disabled = true;
-
+    }
+    if (registrationMessage) {
+      registrationMessage.textContent = '';
+      registrationMessage.removeAttribute('data-state');
     }
 
+    const formData = new FormData(registrationForm);
+    const registration = {
+      role: formData.get('Role'),
+      fullName: formData.get('Full Name'),
+      phoneNumber: formData.get('Phone Number'),
+      email: formData.get('Email'),
+      occupation: formData.get('Occupation'),
+      skillsToLearn: formData.get('Skills I Want To Learn'),
+      skillsToTeach: formData.get('Skills I Can Teach'),
+    };
+
+    try {
+      const response = await fetch('/api/registrations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(registration),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Registration could not be submitted.');
+      }
+
+      registrationForm.reset();
+      studentField.style.display = 'none';
+      teacherField.style.display = 'none';
+      skillsToLearn.required = false;
+      skillsToTeach.required = false;
+      if (registrationMessage) {
+        registrationMessage.textContent = 'Registration submitted successfully.';
+        registrationMessage.dataset.state = 'success';
+      }
+    } catch (error) {
+      console.error('Registration submission failed:', error);
+      if (registrationMessage) {
+        registrationMessage.textContent = error.message || 'Unable to submit your registration. Please try again.';
+        registrationMessage.dataset.state = 'error';
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.innerText = 'Submit Registration';
+        submitButton.disabled = false;
+      }
+    }
   });
 
 }
