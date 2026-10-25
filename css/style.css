@@ -447,7 +447,7 @@ body.is-loading > * { visibility: hidden; }
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
 
-    border-    color: var(--primary-dark);
+    border-color: var(--primary-dark);
 
     box-shadow:
         0 0 0 3px rgba(0, 0, 0, 0.05);
