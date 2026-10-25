@@ -1,33 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mentora Loop — Your Journey. Your Loop.</title>
-<meta name="description" content="Mentora Loop is a flexible learning platform for academic and entry-test preparation, creative skills, practical crafts, professional development and anything worth learning or teaching. Explore courses, learn from mentors, teach your own skills, practice, connect and track progress in one place.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>MentoraLoop — Skills, Mentorship & Learning Ecosystem</title>
+  <meta name="title" content="MentoraLoop — Skills, Mentorship & Learning Ecosystem">
+  <meta name="description" content="Master real skills with verified mentors. From academic prep to hands-on vocational crafts, baking, crochet, digital skills, and home-based earning. Your Journey. Your Loop.">
+  <meta name="keywords" content="MentoraLoop, learning platform, online mentorship, vocational skills, baking classes, crochet learning, MDCAT prep, ECAT prep, digital skills, home earning, teach from home">
+  <meta name="author" content="MentoraLoop">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://mentoraloop.vercel.app/">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mentoraloop.vercel.app/">
+  <meta property="og:site_name" content="MentoraLoop">
+  <meta property="og:title" content="MentoraLoop — Skills, Mentorship & Learning Ecosystem">
+  <meta property="og:description" content="Master real skills with verified mentors. From academic prep to vocational crafts, digital skills, and home-based earning. Close your learning loop.">
+  <meta property="og:image" content="https://mentoraloop.vercel.app/assets/logo-icon.png">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/components.css">
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mentoraloop.vercel.app/">
+  <meta name="twitter:title" content="MentoraLoop — Skills, Mentorship & Learning Ecosystem">
+  <meta name="twitter:description" content="Master real skills with verified mentors. From academic prep to vocational crafts, digital skills, and home-based earning.">
+  <meta name="twitter:image" content="https://mentoraloop.vercel.app/assets/logo-icon.png">
 
-<!-- Favicon set, generated from the brand mark -->
-<link rel="icon" href="assets/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<meta name="theme-color" content="#070D19">
+  <!-- Schema.org Structured Data (JSON-LD) for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://mentoraloop.vercel.app/#website",
+        "url": "https://mentoraloop.vercel.app/",
+        "name": "MentoraLoop",
+        "description": "Inclusive learning, vocational skills, and mentorship ecosystem.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "MentoraLoop",
+          "url": "https://mentoraloop.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://mentoraloop.vercel.app/assets/logo-icon.png"
+          }
+        }
+      },
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://mentoraloop.vercel.app/#organization",
+        "name": "MentoraLoop",
+        "url": "https://mentoraloop.vercel.app/",
+        "logo": "https://mentoraloop.vercel.app/assets/logo-icon.png",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61593384272086",
+          "https://www.instagram.com/mentora_loops/",
+          "https://www.linkedin.com/company/mentora-loop/home/"
+        ],
+        "description": "Inclusive learning platform empowering students, artisans, and educators through academic prep, creative vocational crafts, and personalized mentorship."
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Favicon set -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#070D19">
 </head>
 <body class="is-loading">
-
   <div id="page-loader"><div class="loader-ring"></div></div>
 
   <!-- Each section below is a fully separate .html file inside /partials,
        fetched at runtime by js/loader.js and injected into its mount point. -->
   <div id="mount-nav"></div>
-
   <main>
     <div id="mount-hero"></div>
     <div id="mount-categories"></div>
@@ -38,7 +95,6 @@
     <div id="mount-faq"></div>
     <div id="mount-stats"></div>
   </main>
-
   <div id="mount-footer"></div>
 
   <script src="js/loader.js"></script>
